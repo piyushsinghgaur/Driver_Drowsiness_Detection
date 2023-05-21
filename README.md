@@ -10,7 +10,7 @@ The 68 facial landmark detector is a robustly trained efficient detector which d
 <img src="https://github.com/piyushsinghgaur/Driver_Drowsiness_Detection/assets/96806312/8227bc39-39dc-4408-b4e5-b5697f7e704c" align="left" height="350">
 </center></br>
 
-# <h3 >The working of the project</h3>
+# <h3 align="left">The working of the project</h3>
 
 <ul><li>As you can see the<b> above screenshot</b> where the landmarks are detected using the detector.
 <li>Now we are taking the ratio which is described as <i>'Sum of distances of vertical landmarks divided by twice the distance between horizontal landmarks'</i>.
