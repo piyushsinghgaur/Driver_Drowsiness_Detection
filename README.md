@@ -6,9 +6,11 @@ The project includes direct working with the 68 facial landmark detector and als
 The 68 facial landmark detector is a robustly trained efficient detector which detects the points on the human face using which we determine whether the eyes are open or they are closed.</br></br>
 
 <center>
+  ![68_Face_landmark](https://github.com/piyushsinghgaur/Driver_Drowsiness_Detection/assets/96806312/8227bc39-39dc-4408-b4e5-b5697f7e704c)
+
 
 <img src="https://raw.githubusercontent.com/infoaryan/Driver-Drowsiness-Detection/master/screenshots/landmarks.jpg" align="left" height="350">
-<img src="68_Face_landmark.jpg" align="right" height="350">
+<img src="https://github.com/piyushsinghgaur/Driver_Drowsiness_Detection/assets/96806312/8227bc39-39dc-4408-b4e5-b5697f7e704c" align="right" height="350">
 
 </center>
 
