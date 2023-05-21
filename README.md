@@ -8,7 +8,7 @@ The 68 facial landmark detector is a robustly trained efficient detector which d
 <center>
 
 <img src="https://raw.githubusercontent.com/infoaryan/Driver-Drowsiness-Detection/master/screenshots/landmarks.jpg" align="left" height="350">
-<img src="D:\D_Download\68 Face landmark.jpg" align="right" height="350">
+<img src="68_Face_landmark.jpg" align="right" height="350">
 
 </center>
 
