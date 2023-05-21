@@ -22,6 +22,7 @@ drowsy = 0
 active = 0
 status=""
 color=(0,0,0)
+face_frame=0
 
 def compute(ptA,ptB):
 	dist = np.linalg.norm(ptA - ptB)
@@ -75,29 +76,22 @@ while True:
             active=0
             if(sleep>6):
                 status="SLEEPING !!!"
-                color = (220,20,60)
+                color = (255,0,0)
 
-        elif(left_blink==1 or right_blink==1):
+        elif(left_blink==1 or right_blink==1 or mouth_index_ratio>10):
             sleep=0
             active=0
             drowsy+=1
             if(drowsy>6):
                 status="Drowsy !"
-                color = (255,128,0)
-        elif(mouth_index_ratio>10):
-            sleep=0
-            active=0
-            drowsy+=1
-            if(drowsy>6):
-                status="Drowsy !"
-                color = (255,128,0)
+                color = (255,165,0)
         else:
             drowsy=0
             sleep=0
             active+=1
             if(active>6):
                 status="Active :)"
-                color = (238,121,159)
+                color = (0,255,0)
         print("Left Blink= ", left_blink , " Right Blink= ", right_blink, " Mouth ratio= ", mouth_index_ratio)
         cv2.putText(frame, status, (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, color,4)
         

@@ -5,7 +5,12 @@ Driver drowsiness detection is a project built using Dlib and OpenCV with Python
 The project includes direct working with the 68 facial landmark detector and also the face detector of the Dlib library.
 The 68 facial landmark detector is a robustly trained efficient detector which detects the points on the human face using which we determine whether the eyes are open or they are closed.</br></br>
 
-<center><img src="https://raw.githubusercontent.com/infoaryan/Driver-Drowsiness-Detection/master/screenshots/landmarks.jpg" align="center" height="350"></center>
+<center>
+
+<img src="https://raw.githubusercontent.com/infoaryan/Driver-Drowsiness-Detection/master/screenshots/landmarks.jpg" align="left" height="350">
+<img src="D:\D_Download\68 Face landmark.jpg" align="right" height="350">
+
+</center>
 
 <b>The 68-landmark detector data (.dat) file can be found <a href="http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2"> By clicking here</a></B>
 
