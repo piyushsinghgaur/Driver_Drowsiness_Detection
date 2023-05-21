@@ -6,6 +6,7 @@ import numpy as np
 import dlib
 #face_utils for basic operations of conversion
 from imutils import face_utils
+#from playsound import playsound
 
 
 #Initializing the camera and taking the instance
@@ -61,8 +62,11 @@ while True:
         #The numbers are actually the landmarks which will show eye
         left_blink = blinked(landmarks[36],landmarks[37], 
         	landmarks[38], landmarks[41], landmarks[40], landmarks[39])
+        
         right_blink = blinked(landmarks[42],landmarks[43], 
         	landmarks[44], landmarks[47], landmarks[46], landmarks[45])
+        
+        mouth_index_ratio= compute(landmarks[62],landmarks[66])
                 
         #Now judge what to do for the eye blinks
         if(left_blink==0 or right_blink==0):
@@ -71,7 +75,7 @@ while True:
             active=0
             if(sleep>6):
                 status="SLEEPING !!!"
-                color = (255,0,0)
+                color = (220,20,60)
 
         elif(left_blink==1 or right_blink==1):
             sleep=0
@@ -79,21 +83,32 @@ while True:
             drowsy+=1
             if(drowsy>6):
                 status="Drowsy !"
-                color = (0,0,255)
+                color = (255,128,0)
+        elif(mouth_index_ratio>10):
+            sleep=0
+            active=0
+            drowsy+=1
+            if(drowsy>6):
+                status="Drowsy !"
+                color = (255,128,0)
         else:
             drowsy=0
             sleep=0
             active+=1
             if(active>6):
                 status="Active :)"
-                color = (0,255,0)
-        cv2.putText(frame, status, (100,100), cv2.FONT_HERSHEY_SIMPLEX, 1.2, color,3)
+                color = (238,121,159)
+        print("Left Blink= ", left_blink , " Right Blink= ", right_blink, " Mouth ratio= ", mouth_index_ratio)
+        cv2.putText(frame, status, (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, color,4)
+        
+#To mark landmarks of faces
         for n in range(0, 68):
             (x,y) = landmarks[n]
-            cv2.circle(face_frame, (x, y), 1, (255, 255, 255), -1)
-    cv2.imshow("Frame", frame)
-    face_frame = frame.copy()
-    cv2.imshow("Result of detector", face_frame)
+            cv2.circle(face_frame, (x, y), 1, (255,218,185), -1)
+            
+#Output Window    
+    cv2.imshow("Landmark Detection", face_frame)
+    cv2.imshow("Result Of Detection", frame)
     key = cv2.waitKey(1)
     if key == 27:
      break
