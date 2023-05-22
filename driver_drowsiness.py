@@ -6,7 +6,7 @@ import numpy as np
 import dlib
 #face_utils for basic operations of conversion
 from imutils import face_utils
-#from playsound import playsound
+from playsound import playsound
 
 
 #Initializing the camera and taking the instance
@@ -75,6 +75,7 @@ while True:
             drowsy=0
             active=0
             if(sleep>6):
+                playsound("F:\Driver_Drowsiness_Detection\sleep.mp3")
                 status="SLEEPING !!!"
                 color = (255,0,0)
 
@@ -83,6 +84,7 @@ while True:
             active=0
             drowsy+=1
             if(drowsy>6):
+                playsound('F:\Driver_Drowsiness_Detection\drowsy.mp3')
                 status="Drowsy !"
                 color = (255,165,0)
         else:
