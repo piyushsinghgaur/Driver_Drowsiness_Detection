@@ -15,4 +15,12 @@ The 68 facial landmark detector is a robustly trained efficient detector which d
 <img src="https://github.com/piyushsinghgaur/Driver_Drowsiness_Detection/assets/96806312/8227bc39-39dc-4408-b4e5-b5697f7e704c" align="left" height="350">
 </center></br>
 
+![Active](https://github.com/piyushsinghgaur/Driver_Drowsiness_Detection/assets/96806312/a6ab185f-039c-4320-a434-a0dc66346b50)
+
+![Drowsy](https://github.com/piyushsinghgaur/Driver_Drowsiness_Detection/assets/96806312/788a6310-8461-4a17-a184-cb60994c95d0)
+
+![Sleeeping](https://github.com/piyushsinghgaur/Driver_Drowsiness_Detection/assets/96806312/988fd06c-7060-4615-90f5-87806de9348f)
+
+
+
 
